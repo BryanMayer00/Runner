@@ -161,6 +161,8 @@ while True:
         if not game_active:
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 game_active = True
+                obstacle_group.empty()
+                pygame.time.set_timer(obstacle_timer, 1600)
                 start_time = pygame.time.get_ticks()
 
         if event.type == obstacle_timer:
